@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let!(:user) { User.new(first_name: "Lionel", last_name: "Messi", email: "Messi@barcelona.com", password: "password") }
+  let!(:user) { User.new(first_name: "Lionel", last_name: "Messi", username: "Leo10", email: "Messi@barcelona.com", password: "password") }
 
   describe "first_name" do
   it "should return the user's first name" do
