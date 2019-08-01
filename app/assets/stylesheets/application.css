@@ -19,3 +19,15 @@
    position: sticky;
    top: 2rem;
  }
+
+.training-form {
+  text-align: center;
+}
+
+.button {
+  margin: 5px 10px;
+}
+
+.training-show {
+  text-align: center;
+}

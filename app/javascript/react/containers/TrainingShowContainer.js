@@ -24,7 +24,6 @@ class TrainingShowContainer extends Component {
       })
       .then(response => response.json())
       .then(body => {
-        debugger;
         this.setState({ training: body.training })
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
