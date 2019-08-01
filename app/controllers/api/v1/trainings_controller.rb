@@ -5,6 +5,10 @@ class Api::V1::TrainingsController < ApplicationController
     render json: Training.all
   end
 
+  def show
+    render json: Training.find(params[:id])
+  end
+
   def create
     training = Training.new(
       title: training_params[:title],

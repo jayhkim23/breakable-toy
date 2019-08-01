@@ -7,8 +7,7 @@ class TrainingsIndexContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
-      trainings: [],
-      newTraining: ''
+      trainings: []
     }
 
     this.addNewTraining = this.addNewTraining.bind(this)
@@ -35,7 +34,6 @@ class TrainingsIndexContainer extends Component {
   })
   .then(response => response.json())
   .then(body => {
-    // console.log(body)
     let allTrainings = this.state.trainings
     this.setState({ trainings: allTrainings.concat(body.training) })
     console.log(this.state.trainings)
@@ -78,12 +76,16 @@ class TrainingsIndexContainer extends Component {
     })
 
     return(
-      <div>
+    <div className="row">
+      <div className="training-index columns large-8">
         {trainings}
+      </div>
+        <div className="training-form sticky columns large-4 panel">
         <TrainingForm
           addNewTraining={this.addNewTraining}
         />
       </div>
+    </div>
     )
   }
 }
