@@ -78,12 +78,16 @@ class TrainingsIndexContainer extends Component {
     })
 
     return(
-      <div>
+    <div className="row">
+      <div className="review-index columns large-8">
         {trainings}
+      </div>
+        <div className="review-form sticky columns large-4 panel">
         <TrainingForm
           addNewTraining={this.addNewTraining}
         />
       </div>
+    </div>
     )
   }
 }
