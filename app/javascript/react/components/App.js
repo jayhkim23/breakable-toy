@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import TrainingsIndexContainer from "../containers/TrainingsIndexContainer"
 import TrainingShowContainer from "../containers/TrainingShowContainer"
-
 export const App = (props) => {
   return (
     <BrowserRouter>
