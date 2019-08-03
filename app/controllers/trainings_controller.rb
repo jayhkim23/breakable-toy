@@ -6,5 +6,5 @@ class TrainingsController < ApplicationController
   def show
     @trainings = Training.find(params[:id])
   end
-  
+
 end

@@ -1,5 +1,4 @@
 import React from 'react';
-import { railsAssetImagePath } from '../constants/railsAssetImagePath';
 
 const Message = props => {
   return(

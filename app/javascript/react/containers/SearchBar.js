@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TrainingTile from '../components/TrainingTile'
+import { Link } from 'react-router-dom';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class SearchBar extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
+    this.props.history.push(`/trainings/${this.state.searchString}`);
     const body = JSON.stringify({
     search_string: this.state.searchString
   })
@@ -65,9 +67,12 @@ class SearchBar extends Component {
               placeholder='Choose your location:'
               onChange={this.handleChange}
               />
+
               <input className="search-bar-button" type='submit' value='Search' />
             </form>
-              <ul>{trainings}</ul>
+            <ul>
+            {trainings}
+            </ul>
           </div>
       </div>
     )
