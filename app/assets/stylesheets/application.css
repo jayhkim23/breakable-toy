@@ -10,9 +10,9 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require foundation_and_overrides
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
 
  */
  body {
@@ -39,20 +39,19 @@
 }
 
 .search-bar {
-  margin-top: 10rem;
-  margin-left: 20rem;
-  text-align: center;
-  background-color: transparent;
-  border-radius: 20px;
-}
+    margin-top: 10rem;
+    margin-left: 20rem;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 20px;
+  }
 
-.search-bar-title {
-  color: white
-}
+  .search-bar-title {
+    color: white
+  }
 
-
-.home-page-title {
-  text-align: center;
-  color: blue;
-  font-family: Impact, "Franklin Gothic Bold", "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+  .home-page-title {
+    text-align: center;
+    color: blue;
+    font-family: Impact, "Franklin Gothic Bold", "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
 }

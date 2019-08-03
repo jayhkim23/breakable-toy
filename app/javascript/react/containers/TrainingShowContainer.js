@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import TrainingShow from '../components/TrainingShow'
+import ChatContainer from './ChatContainer'
 
 class TrainingShowContainer extends Component {
   constructor(props) {
@@ -34,6 +35,10 @@ class TrainingShowContainer extends Component {
       return(
         <div>
         <TrainingShow
+        training={this.state.training}
+        />
+        <ChatContainer
+        id={this.props.match.params.id}
         training={this.state.training}
         />
         </div>
