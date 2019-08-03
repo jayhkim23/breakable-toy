@@ -26,6 +26,12 @@ class Api::V1::TrainingsController < ApplicationController
         render json: {error: "Training could not be uploaded"}
     end
   end
+
+    def search
+    @trainings = Training.where("title ILIKE ? OR description ILIKE ?", "%#{params['search_string']}%", "%#{params['search_string']}%")
+    render json: @trainings
+  end
+
 end
 
 private

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :trainings, only: [:index, :show, :new, :create]
+      post 'trainings/search', to: 'trainings#search'
     end
   end
 end
