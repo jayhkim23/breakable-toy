@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       resources :messages, only: [:create]
       resources :users, only: [:show]
       get "users/current" => "users#current_user"
+      post 'trainings/search', to: 'trainings#search'
     end
   end
 end
