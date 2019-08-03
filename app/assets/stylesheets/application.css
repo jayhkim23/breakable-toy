@@ -15,6 +15,12 @@
  *= require foundation_and_overrides
 
  */
+ body {
+   background-image: url("stadium-otmar-hitfield-FT.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
  .sticky {
    position: sticky;
    top: 2rem;
@@ -30,4 +36,23 @@
 
 .training-show {
   text-align: center;
+}
+
+.search-bar {
+  margin-top: 10rem;
+  margin-left: 20rem;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+.search-bar-title {
+  color: white
+}
+
+
+.home-page-title {
+  text-align: center;
+  color: blue;
+  font-family: Impact, "Franklin Gothic Bold", "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
 }
