@@ -94,8 +94,9 @@ class ChatContainer extends Component {
     }, this);
 
     return(
-      <div>
-        <div className='callout chat panel column large-4' id={this.props.training.id}>
+      <div className="chat-window panel columns large-5">
+      <h1>Practice Planner</h1>
+        <div className='callout chat'>
           {messages}
         </div>
         <form onSubmit={this.handleFormSubmit}>
@@ -105,7 +106,6 @@ class ChatContainer extends Component {
             handlerFunction={this.handleMessageChange}
           />
         </form>
-
       </div>
     );
   }

@@ -38,10 +38,7 @@
   text-align: center;
 }
 
-.callout {
-  margin-left: 20px;
-  max-width: 400px;
-  .search-bar {
+.search-bar {
     margin-top: 10rem;
     margin-left: 20rem;
     text-align: center;
