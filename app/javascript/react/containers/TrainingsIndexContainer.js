@@ -42,22 +42,22 @@ class TrainingsIndexContainer extends Component {
 }
 
   componentDidMount(){
-    fetch("/api/v1/trainings")
-    .then(response => {
-      if (response.ok) {
-        return response
-      } else {
-        let errorMessage = 'Something went wrong!'
-        let error = new Error(errorMessage)
-        throw(error)
-      }
-    })
-    .then(response => response.json())
-    .then(body => {
-      this.setState( {trainings: body.trainings} )
-    })
-    .catch(error => console.error(error.message))
-  }
+      fetch("/api/v1/trainings")
+      .then(response => {
+        if (response.ok) {
+          return response
+        } else {
+          let errorMessage = 'Something went wrong!'
+          let error = new Error(errorMessage)
+          throw(error)
+        }
+      })
+      .then(response => response.json())
+      .then(body => {
+        this.setState( {trainings: body.trainings} )
+      })
+      .catch(error => console.error(error.message))
+    }
 
   render(){
     let trainings = this.state.trainings.map(training => {

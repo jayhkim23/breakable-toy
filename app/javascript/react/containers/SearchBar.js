@@ -55,6 +55,7 @@ class SearchBar extends Component {
       />
     )
   })
+
     return(
       <div>
         <h1 className="home-page-title">TRAINING FC</h1>
