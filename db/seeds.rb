@@ -19,8 +19,10 @@ if Rails.env.development?
   training1 = Training.create!(
   title: "Focusing on agility drills",
   description: "Interested in gathering to do a set of agility drills",
-  date: "2019-05-03",
-  time: "18:00",
+  date: "08/15/19",
+  time: "6:00pm",
+  city: "Medford",
+  state: "MA",
   min: 2,
   max: 8,
   user: user1
@@ -29,8 +31,10 @@ if Rails.env.development?
   training2 = Training.create!(
   title: "Dribbling",
   description: "Interested in meeting up to do dribbling drills",
-  date: "2019-08-03",
-  time: "13:00",
+  date: "08/23/19",
+  time: "8:00pm",
+  city: "Boston",
+  state: "MA",
   min: 4,
   max: 10,
   user: user1

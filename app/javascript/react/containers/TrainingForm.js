@@ -11,6 +11,8 @@ class TrainingForm extends Component {
       description: '',
       date: '',
       time: '',
+      city: '',
+      state: '',
       min: '',
       max: ''
     }
@@ -27,6 +29,8 @@ class TrainingForm extends Component {
         description: this.state.description,
         date: this.state.date,
         time: this.state.time,
+        city: this.state.city,
+        state: this.state.state,
         min: this.state.min,
         max: this.state.max
     }
@@ -41,6 +45,8 @@ class TrainingForm extends Component {
       description: '',
       date: '',
       time: '',
+      city: '',
+      state: '',
       min: '',
       max: '' })
   }
@@ -69,6 +75,7 @@ class TrainingForm extends Component {
             content={this.state.date}
             handleInputChange={this.handleChange}
             label="Date"
+            placeholder="MM/DD/YYYY"
             name="date"
           />
           <TextField
@@ -76,6 +83,18 @@ class TrainingForm extends Component {
             handleInputChange={this.handleChange}
             label="Time"
             name="time"
+          />
+          <TextField
+            content={this.state.city}
+            handleInputChange={this.handleChange}
+            label="City"
+            name="city"
+          />
+          <TextField
+            content={this.state.state}
+            handleInputChange={this.handleChange}
+            label="State"
+            name="state"
           />
           <NumberField
             content={this.state.min}

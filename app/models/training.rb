@@ -3,6 +3,8 @@ class Training < ApplicationRecord
   validates :description, presence: true
   validates :date, presence: true
   validates :time, presence: true
+  validates :city, presence: true
+  validates :state, presence: true
   validates :user_id, presence: true
   validates :min, presence: true
   validates :max, presence: true

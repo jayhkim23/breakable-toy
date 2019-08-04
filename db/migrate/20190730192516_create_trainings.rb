@@ -3,8 +3,10 @@ class CreateTrainings < ActiveRecord::Migration[5.2]
     create_table :trainings do |t|
       t.string :title, null: false
       t.text :description, null: false
-      t.date :date, null: false
+      t.string :date, null: false
       t.string :time, null: false
+      t.string :city, null: false
+      t.string :state, null: false
       t.integer :min, null: false
       t.integer :max, null: false
 
