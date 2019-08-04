@@ -7,9 +7,11 @@ class TrainingsIndexContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
-      trainings: []
+      trainings: [],
+      search: ''
     }
 
+console.log(this.props.location.state.id)
     this.addNewTraining = this.addNewTraining.bind(this)
   }
 
@@ -42,6 +44,22 @@ class TrainingsIndexContainer extends Component {
 }
 
   componentDidMount(){
+    if (this.props.location.state.id) {
+      const body = JSON.stringify({
+        search_string: this.props.location.state.id
+      })
+      fetch('/api/v1/trainings/search.json', {
+        method: 'POST',
+        body: body,
+        credentials: 'same-origin',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+      })
+      .then(response => response.json())
+      .then(body => {
+        console.log(body)
+        this.setState( {trainings: body.trainings} )
+      })
+    } else {
     fetch("/api/v1/trainings")
     .then(response => {
       if (response.ok) {
@@ -58,6 +76,8 @@ class TrainingsIndexContainer extends Component {
     })
     .catch(error => console.error(error.message))
   }
+}
+
 
   render(){
     let trainings = this.state.trainings.map(training => {
@@ -69,6 +89,8 @@ class TrainingsIndexContainer extends Component {
           description={training.description}
           date={training.date}
           time={training.time}
+          city={training.city}
+          state={training.state}
           min={training.min}
           max={training.max}
         />
@@ -77,6 +99,7 @@ class TrainingsIndexContainer extends Component {
 
     return(
     <div className="row">
+      <h1 className="location"> {this.props.location.state.id} </h1>
       <div className="training-index columns large-8">
         {trainings}
       </div>

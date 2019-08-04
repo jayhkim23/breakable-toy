@@ -35,8 +35,10 @@ ActiveRecord::Schema.define(version: 2019_08_02_030411) do
   create_table "trainings", force: :cascade do |t|
     t.string "title", null: false
     t.text "description", null: false
-    t.date "date", null: false
+    t.string "date", null: false
     t.string "time", null: false
+    t.string "city", null: false
+    t.string "state", null: false
     t.integer "min", null: false
     t.integer "max", null: false
     t.bigint "user_id", null: false
