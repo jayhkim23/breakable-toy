@@ -13,6 +13,30 @@ class TrainingsIndexContainer extends Component {
 
 console.log(this.props.location.state.id)
     this.addNewTraining = this.addNewTraining.bind(this)
+    this.handleDelete = this.handleDelete.bind(this)
+    this.deleteTraining = this.deleteTraining.bind(this)
+  }
+
+  handleDelete(id){
+
+    fetch(`/api/v1/trainings/${id}`,
+    { credentials: 'same-origin',
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        }
+      }).then((response) => {
+        console.log('Item was deleted!')
+          this.deleteTraining(id)
+        })
+    }
+
+    deleteTraining(id){
+      let newTrainings = this.state.trainings.filter((training) => training.id !== id)
+    this.setState({
+      trainings: newTrainings
+    })
   }
 
   addNewTraining(trainingObject) {
@@ -93,6 +117,7 @@ console.log(this.props.location.state.id)
           state={training.state}
           min={training.min}
           max={training.max}
+          handleDelete={this.handleDelete}
         />
       )
     })
