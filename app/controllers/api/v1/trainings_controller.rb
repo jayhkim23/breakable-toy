@@ -29,12 +29,17 @@ class Api::V1::TrainingsController < ApplicationController
     end
   end
 
+  def destroy
+    Training.destroy(params[:id])
+  end
+
     def search
     @trainings = Training.where("city ILIKE ? OR state ILIKE ?", "%#{params['search_string']}%", "%#{params['search_string']}%")
     render json: @trainings
   end
-
 end
+
+
 
 private
 
