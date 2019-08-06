@@ -84,18 +84,21 @@ class TrainingForm extends Component {
             label="Time"
             name="time"
           />
-          <TextField
+          <div className="city-state-field ">
+          <TextField className="city column"
             content={this.state.city}
             handleInputChange={this.handleChange}
             label="City"
             name="city"
           />
-          <TextField
+          <TextField className="state column"
             content={this.state.state}
             handleInputChange={this.handleChange}
             label="State"
             name="state"
           />
+          </div>
+          <div className="number-field">
           <NumberField
             content={this.state.min}
             handleInputChange={this.handleChange}
@@ -108,6 +111,7 @@ class TrainingForm extends Component {
             label="Maximum Number of Participants"
             name="max"
           />
+          </div>
           <div className="button-group">
             <input className="button success" type="submit" value="Submit" />
             <button className="button" onClick={this.handleClearForm}>Clear</button>

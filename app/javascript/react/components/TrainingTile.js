@@ -7,7 +7,7 @@ const TrainingTile = (props) => {
 
     <div className="training-tile panel callout" data-closable>
       <button className="alert close-button" aria-label="Close alert" type="button" onClick={() => props.handleDelete(props.id)} data-close>
-        <span aria-hidden="true">&times;</span>
+        <i className="glyphicon glyphicon-remove"></i>
       </button>
       <div className='title'>
         <Link to={`/trainings/${props.id}`}>

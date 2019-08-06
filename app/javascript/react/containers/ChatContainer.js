@@ -96,7 +96,8 @@ class ChatContainer extends Component {
     return(
       <div className="chat-window panel columns large-5">
       <h1>Practice Planner</h1>
-        <div className='callout chat'>
+
+        <div className='message-box callout panel'>
           {messages}
         </div>
         <form onSubmit={this.handleFormSubmit}>
