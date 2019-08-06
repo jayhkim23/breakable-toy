@@ -6,12 +6,12 @@ Rails.application.routes.draw do
     get "users/sign_out" => "devise/sessions#destroy"
   end
 
-  resources :trainings, only: [:index, :show, :new, :create]
+  resources :trainings, only: [:index, :show, :new, :create, :destroy]
   resources :users, only: [:index, :destroy]
 
   namespace :api do
     namespace :v1 do
-      resources :trainings, only: [:index, :show, :new, :create]
+      resources :trainings, only: [:index, :show, :new, :create, :destroy]
       resources :messages, only: [:create]
       resources :users, only: [:show]
       get "users/current" => "users#current_user"

@@ -15,6 +15,8 @@ class Api::V1::TrainingsController < ApplicationController
       description: training_params[:description],
       date: training_params[:date],
       time: training_params[:time],
+      city: training_params[:city],
+      state: training_params[:state],
       min: training_params[:min],
       max: training_params[:max]
     )
@@ -27,12 +29,17 @@ class Api::V1::TrainingsController < ApplicationController
     end
   end
 
-    def search
-    @trainings = Training.where("title ILIKE ? OR description ILIKE ?", "%#{params['search_string']}%", "%#{params['search_string']}%")
-    render json: @trainings
+  def destroy
+    Training.destroy(params[:id])
   end
 
+    def search
+    @trainings = Training.where("city ILIKE ? OR state ILIKE ?", "%#{params['search_string']}%", "%#{params['search_string']}%")
+    render json: @trainings
+  end
 end
+
+
 
 private
 
@@ -42,6 +49,8 @@ def training_params
     :description,
     :date,
     :time,
+    :city,
+    :state,
     :min,
     :max
   )

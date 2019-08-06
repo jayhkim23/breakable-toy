@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import TrainingTile from '../components/TrainingTile'
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router';
 
 class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       searchTrainings: [],
-      searchString: ''
+      searchString: '',
+      redirect: false
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -21,7 +23,7 @@ class SearchBar extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.history.push(`/trainings/${this.state.searchString}`);
+    //this.props.history.push(`/trainings/${this.state.searchString}`);
     const body = JSON.stringify({
     search_string: this.state.searchString
   })
@@ -35,7 +37,7 @@ class SearchBar extends Component {
   .then(body => {
     console.log(body)
     let allSearchTrainings = this.state.searchTrainings
-    this.setState({ searchTrainings: allSearchTrainings.concat(body.trainings) })
+    this.setState({ searchTrainings: allSearchTrainings.concat(body.trainings), redirect: true })
   })
     console.log(`Form submitted: ${this.state.searchString}`);
   }
@@ -50,12 +52,21 @@ class SearchBar extends Component {
         description={training.description}
         date={training.date}
         time={training.time}
+        city={training.city}
+        state={training.state}
         min={training.min}
         max={training.max}
       />
     )
   })
 
+  if (this.state.redirect) {
+    return <Redirect to={{
+      pathname: '/trainings',
+      state: {id: this.state.searchString}
+    }}/>;
+  }
+  
     return(
       <div>
         <h1 className="home-page-title">TRAINING FC</h1>
