@@ -57,8 +57,9 @@ class TrainingForm extends Component {
 
   render() {
     return(
-        <div>
-        <form className="new-review-form callout" onSubmit={this.handleFormSubmit}>
+        <div className="new-review-form callout">
+        <h3> Add your own! </h3>
+        <form onSubmit={this.handleFormSubmit}>
           <TextField
             content={this.state.title}
             handleInputChange={this.handleChange}
@@ -75,7 +76,7 @@ class TrainingForm extends Component {
             content={this.state.date}
             handleInputChange={this.handleChange}
             label="Date"
-            placeholder="MM/DD/YYYY"
+            placeholder="MM/DD/YY"
             name="date"
           />
           <TextField
@@ -102,19 +103,19 @@ class TrainingForm extends Component {
           <NumberField
             content={this.state.min}
             handleInputChange={this.handleChange}
-            label="Minimum Number of Participants"
+            label="Minimum Participants"
             name="min"
           />
           <NumberField
             content={this.state.max}
             handleInputChange={this.handleChange}
-            label="Maximum Number of Participants"
+            label="Maximum Participants"
             name="max"
           />
           </div>
           <div className="button-group">
-            <input className="button success" type="submit" value="Submit" />
-            <button className="button" onClick={this.handleClearForm}>Clear</button>
+            <button className="submit-button medium success" type="submit" value="Submit">Submit</button>
+            <button className="clear-button medium" onClick={this.handleClearForm}>Clear</button>
           </div>
         </form>
         </div>

@@ -16,58 +16,95 @@
 
  */
 
- body {
-   /* background-image: url("stadium-otmar-hitfield-FT.jpg"); */
+body {
+   background: url("football-field.jpg");
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
+
  }
 
-h1 {
-  color: white
+.top-bar {
+  background-color: #4FAC6A;
 }
 
-.header {
-  color: black
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: #4FAC6A;
 }
 
-.log-in {
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  background: #2D6513;
+}
+
+ .home-page-title {
+     text-align: center;
+     color: white;
+     font-family: 'Francois One', sans-serif;
+     margin-top: 15rem;
+     margin-left: 7rem;
+ }
+
+ .search-bar {
+     margin-top: 5rem;
+     margin-left: 28rem;
+     text-align: center;
+     background-color: transparent;
+     border-radius: 20px;
+     border-color: #270E39;
+   background: rgb(0, 0, 0); /* Fallback color */
+   background: rgba(0, 0, 0, 0.25); /* Black background with 0.5 opacity */
+   color: #f1f1f1; /* Grey text */
+ }
+
+ .search-input {
+   border-radius: 20px;
+
+ }
+
+.log-in-page {
   margin-left: 30rem;
   margin-right: 30rem;
-  background-color: beige;
-  border: solid black;
+  border: #270E39;
   border-radius: 5%;
   padding: 50px 50px;
   margin-top: 5rem;
+  background-color: transparent;
+  background: rgba(0, 0, 0, 0.25)
 }
 
-/* .sign-up-page {
-background-color: white;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
-
-} */
-
-.sign-up {
+.log-in-header {
   color: white;
+}
+
+label {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+.sign-up-page {
   margin-left: 30rem;
   margin-right: 30rem;
-  background-color: beige;
-  border: solid black;
-  border-radius: 1%;
+  border: #270E39;
+  border-radius: 5%;
   padding: 50px 50px;
-  margin-top: 1rem;
+  margin-top: 5rem;
+  background-color: transparent;
+  background: rgba(0, 0, 0, 0.25)
+}
+
+.sign-up-header {
+  color: white
+}
+.password-field {
+  color: white
 }
 
 .info {
   color: black
 }
-
-.sticky {
-   position: sticky;
-   top: 2rem;
- }
 
 .training-form {
   text-align: center;
@@ -81,50 +118,171 @@ background-color: white;
   text-align: center;
 }
 
-.search-bar {
-    margin-top: 1rem;
-    margin-left: 20rem;
-    text-align: center;
-    background-color: transparent;
-    border-radius: 20px;
-    border-color: black;
-    /* box-shadow: 10px 5px 5px black; */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-}
-
 .search-button {
 border-radius: 20px;
 font-size: 20px;
 }
 
-.home-page-title {
-    margin-top: 5rem;
-    text-align: center;
-    color: black;
-    font-family: Impact, "Franklin Gothic Bold", "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+.location {
+  color: white;
+  margin-left: 0.75rem;
+  font-family: 'Francois One', sans-serif;
 }
 
-.location {
-  color: navy;
-  margin-left: 0.75rem;
+.panel h3 {
+  font-family: 'Francois One', sans-serif;
+  color: white;
+}
+
+.training-form {
+  border: #270E39;
+  border-radius: 5%;
+  background-color: transparent;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+#search-input {
+  font-size: 1.5em
+}
+
+#input-label {
+  font-size: 1.25rem
+}
+#form-field {
+  font-size: 1.25em;
+}
+
+#number-input-label {
+  font-size: 1.25rem
+}
+#number-form-field {
+  font-size: 1em;
+  text-align: center;
+}
+
+#input-group-field {
+  font-size: 1.25rem
+}
+
+.new-review-form {
+  font-family: 'Francois One', sans-serif;
+}
+
+.sticky {
+   position: sticky;
+   top: 2rem;
+ }
+
+ /* .submit-button {
+   font-family: 'Francois One', sans-serif;
+   color: white;
+   background: transparent;
+   border: solid #4FAC6A;
+ }
+
+ .submit-button:hover {
+   font-family: 'Francois One', sans-serif;
+   background: transparent;
+   border: solid #4FAC6A;
+ }
+
+ .clear-button {
+   font-family: 'Francois One', sans-serif;
+   color: white;
+   background: transparent;
+   border: solid navy;
+ }
+
+ .clear-button:hover {
+   font-family: 'Francois One', sans-serif;
+   color: navy;
+   background: transparent;
+   border: solid navy;
+ } */
+
+.training-index {
+  background-color: transparent;
+  padding-bottom: 30rem;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.training-tile {
+  background-color: transparent;
+  margin: 15px 15px;
+  border: solid white;
+  padding: 15px 15px;
+  color: white;
+  border-radius: 10px;
+}
+
+.training-tile:hover {
+  background-color: transparent;
+  margin: 15px 15px;
+  border: solid #4FAC6A;
+  padding: 15px 15px;
+  border-radius: 10px;
+  color: #4FAC6A;
+
 }
 
 .close-button {
     float: right;
-    font-size: 10px;
-    padding: 5px;
+    font-size: 15px;
+    padding: 0px;
     margin: 0px 0px;
+    background-color: transparent;
+    border-radius: 5px;
+    color: white;
+}
+
+.close-button:hover {
+    float: right;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px 0px;
+    background-color: transparent;
+    border-radius: 5px;
+    color: red;
+}
+
+.training-show {
+  background-color: transparent;
+}
+
+.training-show h2 {
+  color: white;
+  font-family: 'Francois One', sans-serif;
+  font-size: 50px;
+}
+
+.training-show p {
+  color: white;
+  font-family: 'Francois One', sans-serif;
+  font-size: 25px;
 }
 
 .chat-window {
   margin-right: 5rem;
-  text-align: center
+  text-align: center;
+  background: transparent;
+}
+
+.chat-window h1 {
+  color: white;
+  font-family: 'Francois One', sans-serif;
 }
 
 .message-box {
   text-align: left;
+  height: 300px;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+#message {
+  font-size: 20px;
+  position: relative;
+  bottom: 0;
 }
 
 /* .city-state-field {

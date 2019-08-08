@@ -124,11 +124,10 @@ console.log(this.props.location.state.id)
     return(
     <div className="row">
       <h1 className="location"> Training Sessions in {this.props.location.state.id} </h1>
-      <div className="training-index columns large-8">
+      <div className="training-index panel columns large-8">
         {trainings}
       </div>
         <div className="training-form sticky columns large-4 panel">
-          <h3> Add your own! </h3>
           <TrainingForm
             addNewTraining={this.addNewTraining}
           />

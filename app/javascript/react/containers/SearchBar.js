@@ -69,10 +69,10 @@ class SearchBar extends Component {
 
     return(
       <div>
-        <h1 className="home-page-title">TRAINING FC</h1>
+        <h1 className="home-page-title">Ready for your next training session?</h1>
           <div className="search-bar panel columns small-3 medium-6 large-6">
-            <form onSubmit={this.handleSubmit}>
-              <input
+            <form className="search-input" onSubmit={this.handleSubmit}>
+              <input id="search-input"
               type='text'
               name='searchString'
               value={this.state.searchString}
@@ -84,7 +84,7 @@ class SearchBar extends Component {
               </button>
             </form>
           </div>
-      </div>
+        </div>
     )
   }
 }

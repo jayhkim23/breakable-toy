@@ -2,8 +2,8 @@ import React from 'react'
 
 const TextField = (props) => {
   return (
-    <label>{props.label}
-      <input
+    <label id="input-label">{props.label}
+      <input id="form-field"
         name={props.name}
         placeholder={props.placeholder}
         type="text"
