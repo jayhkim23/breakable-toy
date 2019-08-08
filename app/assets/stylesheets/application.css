@@ -211,18 +211,19 @@ font-size: 20px;
   margin: 15px 15px;
   border: solid white;
   padding: 15px 15px;
-  color: white;
   border-radius: 10px;
 }
 
 .training-tile:hover {
   background-color: transparent;
-  margin: 15px 15px;
   border: solid #4FAC6A;
   padding: 15px 15px;
   border-radius: 10px;
   color: #4FAC6A;
+}
 
+.training-header:hover {
+  color: #4FAC6A;
 }
 
 .close-button {
@@ -284,11 +285,3 @@ font-size: 20px;
   position: relative;
   bottom: 0;
 }
-
-/* .city-state-field {
-  border: solid red;
-
-}
-.number-field {
-  border: solid black;
-} */
