@@ -103,7 +103,6 @@ class ChatContainer extends Component {
     return(
       <div className="chat-window panel columns large-5">
       <h1>Practice Planner</h1>
-
         <div className='message-box panel'>
           {messages}
         </div>
