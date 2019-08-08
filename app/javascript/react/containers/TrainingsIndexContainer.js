@@ -102,7 +102,6 @@ console.log(this.props.location.state.id)
   }
 }
 
-
   render(){
     let trainings = this.state.trainings.map(training => {
       return(
@@ -124,15 +123,15 @@ console.log(this.props.location.state.id)
 
     return(
     <div className="row">
-      <h1 className="location"> {this.props.location.state.id} </h1>
-      <div className="training-index columns large-8">
+      <h1 className="location"> Training Sessions in {this.props.location.state.id} </h1>
+      <div className="training-index panel columns large-8">
         {trainings}
       </div>
         <div className="training-form sticky columns large-4 panel">
-        <TrainingForm
-          addNewTraining={this.addNewTraining}
-        />
-      </div>
+          <TrainingForm
+            addNewTraining={this.addNewTraining}
+          />
+        </div>
     </div>
     )
   }
