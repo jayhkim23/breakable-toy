@@ -17,11 +17,10 @@
  */
 
 body {
-   background: url("football-field.jpg");
+   background-image: url('/.assets/football-field.jpg');
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-
  }
 
 .top-bar {
