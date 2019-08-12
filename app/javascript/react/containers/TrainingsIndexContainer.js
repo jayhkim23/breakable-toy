@@ -11,7 +11,6 @@ class TrainingsIndexContainer extends Component {
       search: ''
     }
 
-console.log(this.props.location.state.id)
     this.addNewTraining = this.addNewTraining.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
     this.deleteTraining = this.deleteTraining.bind(this)
@@ -27,7 +26,6 @@ console.log(this.props.location.state.id)
         'Content-Type': 'application/json'
         }
       }).then((response) => {
-        console.log('Item was deleted!')
           this.deleteTraining(id)
         })
     }
@@ -62,7 +60,6 @@ console.log(this.props.location.state.id)
   .then(body => {
     let allTrainings = this.state.trainings
     this.setState({ trainings: allTrainings.concat(body.training) })
-    console.log(this.state.trainings)
   })
   .catch(error => console.error(`Error in fetch: ${error.message}`));
 }
@@ -80,7 +77,6 @@ console.log(this.props.location.state.id)
       })
       .then(response => response.json())
       .then(body => {
-        console.log(body)
         this.setState( {trainings: body.trainings} )
       })
     } else {

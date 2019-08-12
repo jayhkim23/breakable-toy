@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const TrainingTile = (props) => {
 
   return (
-
     <div className="training-tile" data-closable>
     <button className="close-button" aria-label="Close alert" type="button" onClick={() => props.handleDelete(props.id)} data-close>
       <i className="glyphicon glyphicon-remove"></i>

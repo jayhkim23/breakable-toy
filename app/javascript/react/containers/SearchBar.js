@@ -23,7 +23,6 @@ class SearchBar extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    //this.props.history.push(`/trainings/${this.state.searchString}`);
     const body = JSON.stringify({
     search_string: this.state.searchString
   })
@@ -35,7 +34,6 @@ class SearchBar extends Component {
   })
   .then(response => response.json())
   .then(body => {
-    console.log(body)
     let allSearchTrainings = this.state.searchTrainings
     this.setState({ searchTrainings: allSearchTrainings.concat(body.trainings), redirect: true })
   })
