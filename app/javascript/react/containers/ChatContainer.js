@@ -32,25 +32,18 @@ class ChatContainer extends Component {
       }
     })
     .then((data) => {
-      console.log(data)
       this.setState({user: data})
     })
 
     App.chatChannel = App.cable.subscriptions.create(
-      // Info that is sent to the subscribed method
       {
         channel: "ChatChannel",
         chat_id: this.props.id
-        // currently this is hardcoded
-        // If you had router, you could do:
-        // chat_id: this.props.match.params["id"]
       },
       {
         connected: () => console.log("ChatChannel connected"),
         disconnected: () => console.log("ChatChannel disconnected"),
         received: data => {
-          // Data broadcasted from the chat channel
-          console.log(data)
           this.handleMessageReceipt(data)
         }
       }

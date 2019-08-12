@@ -1,7 +1,6 @@
 class TrainingsController < ApplicationController
   def index
     @trainings = Training.all
-    # @trainings = Training.order("date DESC")
   end
 
   def show
